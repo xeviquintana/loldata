@@ -41,28 +41,28 @@ the project dependencies:
 
 1. **Check if Python 3.12 is already installed:**
 
-```bash
-  python3 --version
-```
+    ```bash
+      python3 --version
+    ```
 
-1. **Download Python 3.12:**
+2. **Download Python 3.12:**
 
-- Visit the [official Python downloads page](https://www.python.org/downloads/) and download the latest version
-  compatible with your system.
+   - Visit the [official Python downloads page](https://www.python.org/downloads/) and download the latest version
+     compatible with your system.
 
-- Follow the installation instructions for your operating system:
-    - Windows: Ensure the "Add Python to PATH" option is checked during installation.
-    - macOS: Use the downloaded installer or Homebrew:
-  ```bash
-  brew install python
-  ```
-    - Linux: Use your package manager. For example, on Ubuntu:
-  ```bash
-  sudo apt update
-  sudo apt install -y python3.12 python3.12-venv python3.12-dev
-  ```
+   - Follow the installation instructions for your operating system:
+     - Windows: Ensure the "Add Python to PATH" option is checked during installation.
+     - macOS: Use the downloaded installer or Homebrew:
+       ```bash
+       brew install python
+       ```
+     - Linux: Use your package manager. For example, on Ubuntu:
+       ```bash
+       sudo apt update
+       sudo apt install -y python3.12 python3.12-venv python3.12-dev
+       ```
 
-1. **Verify the Installation:**
+3. **Verify the Installation:**
 
 ```bash
   python3 --version
@@ -71,49 +71,46 @@ the project dependencies:
 ## 2. Set Up a Virtual Environment
 
 It is recommended to use a virtual environment to isolate depdendencies for the project.
-
-1. **Create a Virtual Environment:**
-
-  ```bash
-  python3.12 -m venv venv
-  ```
-
-1. **Activate the Virtual Environment:**
-
-- Windows:
-
-  ```bash
-  venv\Scripts\activate
-  ```
-
-- macOS/Linux:
-
-  ```bash
-  source venv/bin/activate
-  ```
-
-1. **Verify the Virtual Environment is Active**: When the virtual environment is active, the terminal prompt will show
-   `(venv)`.
+    
+  1. **Create a Virtual Environment:**
+      ```bash
+      python3.12 -m venv venv
+      ```
+  2. **Activate the Virtual Environment:**
+     - Windows:
+       ```bash
+       venv\Scripts\activate
+       ```
+     - macOS/Linux:
+       ```bash
+       source venv/bin/activate
+       ```
+  3. **Verify the Virtual Environment is Active**: When the virtual environment is active, the terminal prompt will show
+     `(venv)`.
 
 ## 3. Install Dependencies
 
-1. Ensure you are in the project directory (where requirements.txt is located).
+  1. Ensure you are in the project directory (where requirements.txt is located). Install the required packages:
+        
+     ```bash
+     python3 -m pip install -r requirements.txt
+     ```
 
-1.Install the required packages:
+  2. Verify the installation:
+      ```bash
+      python3 -m pip list
+      ```
 
-  ```bash
-  python3 -m pip install -r requirements.txt
-  ```
+  3. Run the Project:
+  
+      > [!WARNING]
+      > You'll need an API key from Riot Games until I can provide one for the application without expiring every 24h.
+      > Get the API key [here](https://developer.riotgames.com/) (requires signing in with a Riot Games account).
+      > Paste the API key in [API CLient](APIClient.py:18).
+  
+      After setting up the environment and installing dependencies, you can run the project by simply executing:
 
-1. Verify the installation:
-
-  ```bash
-  python3 -m pip list
-  ```
-
-1. Run the Project
-   After setting up the environment and installing dependencies, you can run the project by simply executing:
-
-```bash
-python3 main.py
-```
+      ```bash
+      python3 main.py
+      ```
+     
