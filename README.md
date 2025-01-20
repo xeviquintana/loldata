@@ -9,10 +9,11 @@ So, if the platform is NA1 and region is Americas:
 - will get top 5 players on the ladder (LIVE)
 - for each player, it will get all champions used in player's last 10 games
 - matches are processed only once, so if two or more players from the top 5 were in the same match, it will be processed
-only once
+  only once
 - finally it will print the top 5 players of the region and the top 10 most used champions from their games, with counts
 
-**_Important_**: this is a simple statistic to pull. Use cases will be enhanced and at some point the plan is to deliver a
+**_Important_**: this is a simple statistic to pull. Use cases will be enhanced and at some point the plan is to deliver
+a
 *self serve platform* to run ad hoc analysis.
 
 # Why this project
@@ -47,20 +48,20 @@ the project dependencies:
 
 2. **Download Python 3.12:**
 
-   - Visit the [official Python downloads page](https://www.python.org/downloads/) and download the latest version
-     compatible with your system.
+    - Visit the [official Python downloads page](https://www.python.org/downloads/) and download the latest version
+      compatible with your system.
 
-   - Follow the installation instructions for your operating system:
-     - Windows: Ensure the "Add Python to PATH" option is checked during installation.
-     - macOS: Use the downloaded installer or Homebrew:
-       ```bash
-       brew install python
-       ```
-     - Linux: Use your package manager. For example, on Ubuntu:
-       ```bash
-       sudo apt update
-       sudo apt install -y python3.12 python3.12-venv python3.12-dev
-       ```
+    - Follow the installation instructions for your operating system:
+        - Windows: Ensure the "Add Python to PATH" option is checked during installation.
+        - macOS: Use the downloaded installer or Homebrew:
+          ```bash
+          brew install python
+          ```
+        - Linux: Use your package manager. For example, on Ubuntu:
+          ```bash
+          sudo apt update
+          sudo apt install -y python3.12 python3.12-venv python3.12-dev
+          ```
 
 3. **Verify the Installation:**
 
@@ -71,47 +72,46 @@ the project dependencies:
 ## 2. Set Up a Virtual Environment
 
 It is recommended to use a virtual environment to isolate depdendencies for the project.
-    
-  1. **Create a Virtual Environment:**
+
+1. **Create a Virtual Environment:**
+    ```bash
+    python3.12 -m venv venv
+    ```
+2. **Activate the Virtual Environment:**
+    - Windows:
       ```bash
-      python3.12 -m venv venv
+      venv\Scripts\activate
       ```
-  2. **Activate the Virtual Environment:**
-     - Windows:
-       ```bash
-       venv\Scripts\activate
-       ```
-     - macOS/Linux:
-       ```bash
-       source venv/bin/activate
-       ```
-  3. **Verify the Virtual Environment is Active**: When the virtual environment is active, the terminal prompt will show
-     `(venv)`.
+    - macOS/Linux:
+      ```bash
+      source venv/bin/activate
+      ```
+3. **Verify the Virtual Environment is Active**: When the virtual environment is active, the terminal prompt will show
+   `(venv)`.
 
 ## 3. Install Dependencies
 
-  1. Ensure you are in the project directory (where requirements.txt is located). Install the required packages:
-        
-     ```bash
-     python3 -m pip install -r requirements.txt
-     ```
+1. Ensure you are in the project directory (where requirements.txt is located). Install the required packages:
 
-  2. Verify the installation:
-      ```bash
-      python3 -m pip list
-      ```
+   ```bash
+   python3 -m pip install -r requirements.txt
+   ```
 
-  3. Run the Project:
+2. Verify the installation:
+    ```bash
+    python3 -m pip list
+    ```
+
+3. Run the Project:
+
+   > [!WARNING]
+   > You'll need an API key from Riot Games until I can provide one for the application without expiring every 24h. Get
+   the API key [here](https://developer.riotgames.com/) (requires signing in with a Riot Games account). Paste the API
+   key in [API CLient](./APIClient.py#L11).
   
-      > [!WARNING]
-      > 
-      > You'll need an API key from Riot Games until I can provide one for the application without expiring every 24h. 
-      > Get the API key [here](https://developer.riotgames.com/) (requires signing in with a Riot Games account). 
-      > Paste the API key in [API CLient](./APIClient.py#L11).
-  
-      After setting up the environment and installing dependencies, you can run the project by simply executing:
+   After setting up the environment and installing dependencies, you can run the project by simply executing:
 
-      ```bash
-      python3 main.py
-      ```
+    ```bash
+    python3 main.py
+    ```
      
