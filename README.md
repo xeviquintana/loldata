@@ -103,10 +103,11 @@ It is recommended to use a virtual environment to isolate depdendencies for the 
 
   3. Run the Project:
   
-     > [!WARNING]
-     > You'll need an API key from Riot Games until I can provide one for the application without expiring every 24h. 
-     > Get the API key [here](https://developer.riotgames.com/) (requires signing in with a Riot Games account). 
-     > Paste the API key in [API CLient](./APIClient.py#L11).
+      > [!WARNING]
+      > 
+      > You'll need an API key from Riot Games until I can provide one for the application without expiring every 24h. 
+      > Get the API key [here](https://developer.riotgames.com/) (requires signing in with a Riot Games account). 
+      > Paste the API key in [API CLient](./APIClient.py#L11).
   
       After setting up the environment and installing dependencies, you can run the project by simply executing:
 
